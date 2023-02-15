@@ -1,0 +1,455 @@
+/*
+Student 1 : Sai Manasa Manthena, 1001959039
+
+Citation:
+https://stackoverflow.com/questions/17827908/how-to-make-fixed-header-table-inside-scrollable-div
+https://youtu.be/QwarZBtFoFA
+https://youtu.be/OJEQaVT45XA
+https://dev.to/brad_beggs/handling-react-form-submit-with-redirect-async-await-for-the-beyond-beginner-57of
+
+
+*/
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.row {
+  padding-top: 5px;
+}
+.box_size {
+  width: 50%;
+  margin: auto;
+}
+.AdminSideBar {
+  width: 345px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background: DarkSlateGray;
+  z-index: 100;
+  transition: width 300ms;
+  box-shadow: 0px 15px 25px DarkSlateGray;
+}
+
+.AdminSidebarInside {
+  height: 90px;
+  padding: 1rem 0rem 1rem 2rem;
+  color: #fff;
+  display: inline-block;
+  padding-right: 1rem;
+  font-family: "Courier New", Courier, monospace;
+  text-transform: uppercase;
+  font-size: 30px;
+  margin-top: 2px;
+}
+
+.AdminSideBarItems {
+  margin-top: 1rem;
+}
+
+.AdminSideBarItems li {
+  width: 100%;
+  margin-bottom: 1.7rem;
+  padding-left: 1rem;
+}
+
+.AdminSideBarItems a {
+  padding-left: 1rem;
+  display: block;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.AdminSideBarItems a.active {
+  background: #e7e7dd;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: #fff;
+  border-radius: 30px 0px 0px 30px;
+}
+.AdminSideBarItems a:hover {
+  background: #ece5e5;
+  color: DarkSlateGray;
+  font-weight: bolder;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-radius: 30px 0px 0px 30px;
+}
+
+.AdminSideBarItems label {
+  padding-left: 1rem;
+  display: block;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.AdminSideBarItems label.active {
+  background: #e7e7dd;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: #fff;
+  border-radius: 30px 0px 0px 30px;
+}
+.AdminSideBarItems label:hover {
+  background: #ece5e5;
+  color: DarkSlateGray;
+  font-weight: bolder;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-radius: 30px 0px 0px 30px;
+}
+
+.AdminHome {
+  transition: margin-left 300ms;
+  margin-left: 345px;
+}
+
+.AdminHome .top {
+  width: 100%;
+}
+
+.AdminHome header {
+  background: #fff;
+  display: flex;
+  height: 90px;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  left: 345px;
+  width: calc(100% - 345px);
+  top: 0;
+  z-index: 100;
+  transition: left 300ms;
+}
+
+.AdminDiv {
+  display: flex;
+  align-items: center;
+}
+
+.AdminHome main {
+  margin-top: 50px;
+  padding: 2rem 1.5rem;
+  background: #f1f5f9;
+  min-height: calc(100vh - 90px);
+}
+
+.AdminCard {
+  margin-top: 3.5rem;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: 100% auto;
+}
+
+header h3 {
+  margin-top: 5px;
+  color: #222;
+}
+
+.AdminR {
+  width: 100%;
+}
+
+.AdminBox {
+  background: #fff;
+  width: 100%;
+}
+
+.AboxTitle {
+  padding: 1rem;
+}
+
+.AboxTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.AboxTitle button {
+  background: DarkSlateGray;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 0.8rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid gold;
+}
+
+.AdminCard table {
+  border-collapse: collapse;
+  width: fit-content;
+  overflow: scroll;
+}
+
+.AdminCard thead tr {
+  border-top: 1px solid DarkSlateGray;
+  border-bottom: 1px solid DarkSlateGray;
+}
+
+.AdminCard thead td {
+  font-weight: 700;
+}
+.AdminCard tbody tr {
+  border-top: 1px solid #f0f0f0;
+  /* border-bottom: 2px solid #f0f0f0; */
+}
+
+.AdminCard td {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  color: #222;
+}
+
+.AdminCard .List {
+  width: 100%;
+  max-height: 500px;
+  overflow: scroll;
+}
+
+.List a {
+  color: #fff;
+}
+
+.AdminCard button {
+  background: DarkSlateGray;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 0.8rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid gold;
+}
+
+.Dashboard {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.DashBoardItem {
+  display: flex;
+  justify-content: space-between;
+  background: lightslategray;
+  padding: 2rem;
+  border-radius: 50px;
+  color: white;
+}
+
+.BoxContent{
+  display:flex; 
+  flex-direction:row;
+ 
+}
+
+.joinChatContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.joinChatContainer h3 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.joinChatContainer input {
+  width: 210px;
+  height: 40px;
+  margin: 7px;
+  border: 2px solid darkslategray;
+  background: white;
+  color: darkslategray;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.joinChatContainer button {
+  width: 225px;
+  height: 50px;
+  margin: 7px;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 16px;
+  background: darkslategray;
+  color: white;
+  cursor: pointer;
+}
+
+.joinChatContainer button:hover {
+  background:#ece5e5;
+    color:DarkSlateGray;
+    font-weight: bolder;
+    /* padding-top: 1rem;
+    padding-bottom: 1rem; */
+    /* border-radius: 30px 0px 0px 30px; */
+}
+
+.chat-window {
+  width: 300px;
+  height: 500px;
+  
+}
+
+.chat-window p {
+  margin: 0;
+}
+.chat-window .chat-header {
+  height: 45px;
+  width: 345px;
+  border-radius: 6px;
+  background: #263238;
+  position: relative;
+  cursor: pointer;
+}
+.chat-window .chat-header p {
+  display: block;
+  padding: 0 1em 0 2em;
+  color: #fff;
+  width: 345px;
+  font-weight: 700;
+  line-height: 45px;
+}
+
+.chat-window .chat-body {
+  /* height: calc(450px - (5px + 70px)); */
+  height: 405px;
+  border: 1px solid #263238;
+  background: whitesmoke;
+
+  width: 345px;
+
+  position: relative;
+}
+.chat-window .chat-body .message-container {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.chat-window .chat-body .message-container::-webkit-scrollbar {
+  display: none;
+}
+.chat-window .chat-body .message {
+  height: auto;
+  padding: 10px;
+  display: flex;
+}
+
+.chat-window .chat-body .message .message-content {
+  width: auto;
+  height: auto;
+  min-height: 40px;
+  max-width: 120px;
+  background: yellow;
+  color: white;
+  border-radius: 5px;
+  background: DarkSlateGray ;
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+  margin-left: 5px;
+  padding-right: 5px;
+  padding-left: 5px;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+#you {
+  justify-content: flex-start;
+}
+
+#you .message-content {
+  justify-content: flex-start;
+}
+
+#you .message-meta {
+  justify-content: flex-start;
+  margin-left: 5px;
+}
+
+#other {
+  justify-content: flex-end;
+}
+
+#other .message-content {
+  justify-content: flex-end;
+  background-color: darkslategray;
+}
+
+#other .message-meta {
+  justify-content: flex-end;
+  margin-right: 5px;
+}
+
+.message-meta #author {
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.chat-window .chat-body .message .message-meta {
+  display: flex;
+  font-size: 12px;
+}
+
+.chat-window .chat-footer {
+  height: 40px;
+  border: 1px solid #263238;
+  width: 345px;
+  border-top: none;
+  display: flex;
+}
+
+.chat-window .chat-footer input {
+  height: 100%;
+  flex: 85%;
+  border: 0;
+  padding: 0 0.7em;
+  font-size: 1em;
+  border-right: 1px dotted #607d8b;
+
+  outline: none;
+  font-family: "Open Sans", sans-serif;
+}
+
+.chat-window .chat-footer button {
+  border: 0;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  flex: 15%;
+  height: 100%;
+  background: transparent;
+  outline: none;
+  font-size: 25px;
+  background: DarkSlateGray ;
+}
+
+
+.hide {
+  opacity: 0 !important;
+}
+
+
+.Chats .ChatApp {
+  margin-top: 1rem;
+  padding: 20;
+  width: 345px;
+  color: #212121;
+  font-weight: bolder;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 30px 0px 0px 30px;
+  display: grid;
+  place-items: left;
+}
+
+.Chats{
+  margin-top: 1rem;
+  display:flex; 
+  flex-direction:row;
+}

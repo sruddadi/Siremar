@@ -1,0 +1,115 @@
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.Register {
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4));
+
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+}
+
+.Register .formBox {
+  width: 380px;
+  height: 400px;
+  background: gold;
+  position: center;
+  background-position: center;
+  margin: 6% auto;
+  border: solid;
+  background: transparent;
+  box-shadow: 0px 15px 25px DarkSlateGray;
+  padding: 5px;
+}
+
+.formBox a {
+  padding-top: 10px;
+  color: white;
+  font-size: 20px;
+  font-weight: solid;
+}
+
+.formBox h2 {
+  text-align: center;
+  color: white;
+}
+
+.input1 {
+  position: center;
+  background: transparent;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 100%;
+  width: 100%;
+  transition: 0.5s;
+}
+.input-field {
+  width: 100%;
+  padding: 10px 0;
+  margin: 5px 0;
+
+  text-align: center;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+
+  padding: 10px 15px;
+  line-height: 18px;
+}
+
+.SubmitBtn {
+  width: 100%;
+  position: center;
+  padding: 10px 30px;
+  cursor: pointer;
+  display: block;
+  background: darkslategray;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+}
+
+#login {
+  left: 50px;
+}
+#register {
+  left: 450px;
+}
+
+select {
+  height: 42px;
+
+  padding: 10px 15px;
+
+  line-height: 18px;
+  font-size: 16px;
+  width: 100%;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  margin-top: 30px;
+  width: 300px;
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+select:focus {
+  outline: none;
+}
+select::after {
+  content: "";
+  position: absolute;
+  right: 8px;
+  top: 45%;
+  margin-top: -4 px;
+  border-top: 8px solid #ccc;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  pointer-events: none;
+}

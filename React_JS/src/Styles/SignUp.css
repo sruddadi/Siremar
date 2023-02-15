@@ -1,0 +1,112 @@
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.Register1 {
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4));
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  
+}
+
+.Register1 .formBox {
+  width: 40%;
+  height: 80%;
+  position: center; 
+  background-position: center;
+  /* margin: auto; */
+  
+  margin-top: 5%;
+  background: transparent;
+
+  flex: auto;
+  padding: 5px;
+}
+
+
+.inputForm{
+  position: center;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: 0.5s;
+  
+  
+  /* margin-bottom: 50%; */
+}
+
+.inputForm ::placeholder{
+  font-weight:lighter;
+  color:	#817f7f;
+}
+.input-field {
+  width: 100%;
+  height: 29px;
+  padding: 2px 0;
+  
+  margin: 5px 0;
+}
+
+
+.SubmitBtn {
+  width: 100%;
+  position: center;
+    /* padding-top: 0%; */
+ 
+  cursor: pointer;
+  display: block;
+  background: linear-gradient(to right, #0f79db, #0f79db);
+}
+
+#login {
+  left: 50px;
+ 
+}
+#register {
+  left: 450px;
+}
+
+.Register1 label {
+  color: white;
+  font-size: 15px;
+  font-weight: bolder;
+}
+
+select {
+  height: 42px;
+
+  padding: 10px 15px;
+
+  line-height: 18px;
+  font-size: 16px;
+  width: 100%;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  margin-top: 30px;
+  width: 300px;
+  position: relative;
+
+  margin: 0 auto;
+  text-align: center;
+}
+select:focus {
+  outline: none;
+}
+select::after {
+  content: "";
+  position: absolute;
+  right: 8px;
+  top: 45%;
+  margin-top: -4 px;
+  border-top: 8px solid #ccc;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  pointer-events: none;
+}

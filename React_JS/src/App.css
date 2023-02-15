@@ -1,0 +1,178 @@
+
+.App {
+  width: 100vw;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  padding: none;
+}
+
+.NavBar .leftSide p {
+  color: darkslategray;
+  font-family: URW Chancery L, cursive;
+  font-weight: bolder;
+  padding-left: 20px;
+  font-size: 25px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+.App-header {
+  background-color: darkslategray;
+  min-height: 100vh;
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  font-family: URW Chancery L, cursive;
+  color: darkblue;
+}
+.rightSideb{
+  text-decoration: none;
+  color: darkslategray;
+  font-family: Palatino, URW Palladio L, serif;
+  font-size: 25px;
+  margin-left: 15px;
+  padding-right: 10px;
+  font-size: 20px;
+}
+
+.rightSide a :hover{
+  border-bottom: 3px solid white;
+  font-size: 25px;
+}
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.NavBar {
+  background-color: white;
+  font-family: URW Chancery L, cursive;
+  width: 100%;
+  height: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+}
+
+
+
+
+.NavBar .rightSide {
+  flex: 50%;
+  display: flex;
+  font-family: URW Chancery L, cursive;
+  justify-content: right;
+  align-items: center;
+  padding-right: 10px;
+}
+
+.NavBar .rightSide .Links {
+  max-height: 80px;
+}
+.NavBar .rightSide .Links :hover{
+  border-bottom: 3px solid darkslategray;
+  font-size: 30px;
+}
+
+.NavBar .rightSide .Links a {
+  text-decoration: none;
+  color: darkslategray;
+  background-color: white;
+  font-family: Palatino, URW Palladio L, serif;
+  font-size: 25px;
+  margin-left: 15px;
+}
+
+.NavBar .leftSide {
+  flex: 50%;
+  color: darkslategray;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 50px;
+}
+
+.NavBar .leftSide img {
+  width: 35px;
+}
+.NavBar .leftSide a {
+  text-decoration: none;
+  color: darkslategray;
+  font-size: 25px;
+  margin-left: 15px;
+}
+
+.NavBar .rightSide button {
+  display: none;
+  background-color: darkslategray;
+  border-radius: 5px;
+  color:rgb(228, 238, 238);
+  margin-left: 20px;
+}
+
+.NavBar .rightSide .Login {
+  display: flex;
+  margin-left: 20px;
+}
+
+.NavBar .rightSide #hidden {
+  display: flex;
+}
+button:hover {
+  cursor: pointer;
+  filter: brightness(1.2);
+}
+
+@media only screen and (max-width: 750px) {
+  .NavBar .rightSide .Links a {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .NavBar .rightSide button {
+    display: flex;
+  }
+  .NavBar .rightSide .Links {
+    display: none;
+  }
+
+  .NavBar .rightSide #hidden {
+    position: absolute;
+    left: 0px;
+    top: 80px;
+    height: 230px;
+    max-height: 230px;
+    width: 100%;
+    background-color: darkslategray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .NavBar .rightSide #hidden a {
+    margin: 10px;
+    
+    font-size: 20px;
+  }
+}

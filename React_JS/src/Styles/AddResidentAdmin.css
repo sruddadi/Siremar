@@ -1,0 +1,242 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+.ResidentSidebar {
+  width: 345px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background: DarkSlateGray ;
+  z-index: 100;
+  transition: width 300ms;
+  box-shadow: 0px 15px 25px DarkSlateGray;
+}
+
+.ResidentSidebarInside {
+  height: 90px;
+  padding: 1rem 0rem 1rem 2rem;
+  color: #fff;
+  display: inline-block;
+  padding-right: 1rem;
+  font-family: 'Courier New', Courier, monospace;
+  text-transform: uppercase;
+  font-size: 30px;
+  margin-top: 2px;
+}
+
+
+.ResidentSideBarItems {
+  margin-top: 1rem;
+}
+
+.ResidentSideBarItems li {
+  width: 100%;
+  margin-bottom: 1.7rem;
+  padding-left: 1rem;
+}
+
+.ResidentSideBarItems a {
+  padding-left: 1rem;
+  display: block;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.ResidentSideBarItems a.active {
+  background:#e7e7dd;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: #fff;
+  border-radius: 30px 0px 0px 30px;
+}
+.ResidentSideBarItems a:hover{
+  background:#ece5e5;
+  color:DarkSlateGray;
+  font-weight: bolder;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-radius: 30px 0px 0px 30px;
+}
+
+
+.ResidentSideBarItems label {
+  padding-left: 1rem;
+  display: block;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.ResidentSideBarItems label.active {
+  background:#e7e7dd;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: #fff;
+  border-radius: 30px 0px 0px 30px;
+}
+.ResidentSideBarItems label:hover{
+  background:#ece5e5;
+  color:DarkSlateGray;
+  font-weight: bolder;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-radius: 30px 0px 0px 30px;
+}
+
+.formSchool .button{
+  
+  color:DarkSlateGray;
+  font-weight: bolder; 
+}
+
+.ResidentHome {
+  transition: margin-left 300ms;
+  margin-left: 345px;
+}
+
+.ResidentHome .top{
+  width: 100%;
+ 
+}
+
+
+header {
+  background: #fff;
+  display: flex;
+  height: 90px;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  position:absolute;
+  left: 345px;
+  width: calc(100% - 345px);
+  top: 0;
+  z-index: 100;
+  transition: left 300ms;
+}
+
+
+.ResidentDiv {
+  display: flex;
+  align-items: center;
+}
+
+
+
+
+main {
+  margin-top: 50px;
+  padding: 2rem 1.5rem;
+  background:#f1f5f9;
+  min-height: calc(100vh - 90px);
+}
+.ResidentCard {
+  margin-top: 3.5rem;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: 65% auto;
+}
+header h3 {
+  margin-top: 5px;
+  color: #222;
+}
+.box {
+  
+  
+  background: #fff;
+  width: 75%;
+}
+.box2 {
+  
+  
+  background: #fff;
+  width: 75%;
+}
+.StoreBox{
+  margin-top: -43.001%;
+  margin-left: 79%;
+  background: #fff;
+  width: 75%;
+}
+.Schools{
+  margin-top: -43.001%;
+  margin-left: 79%;
+  background: #fff;
+  width: 75%;
+}
+.SchoolsReg{
+  padding-top: 10px;
+  margin-top: -43.001%;
+  margin-left: 79%;
+  background: #fff;
+  width: 75%;
+}
+.Flights{
+  margin-top: -43.001%;
+  margin-left: 79%;
+  background: #fff;
+  width: 75%;
+}
+
+
+.boxTitle {
+  padding: 1rem;
+}
+
+.boxTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+
+.boxTitle button {
+  background: DarkSlateGray;
+  border-radius: 10px;
+  color: #fff;
+  font-size: .8rem;
+  padding: .5rem 1rem;
+  border: 1px solid white;
+}
+select{
+  align-items: center;
+  width: 100%;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+thead tr {
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+thead td {
+  font-weight: 700;
+}
+
+td {
+  padding: .5rem 1rem;
+  font-size: .9rem;
+  color: #222;
+}
+
+
+.List {
+  width: 100%;
+  
+}
+
+
+
+
+
